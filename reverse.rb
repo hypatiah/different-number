@@ -10,5 +10,3 @@ describe "Sentence reverser" do
     expect(sentence_reverser(test_sentence)).to eq("I am backwards")
   end
 end
-
-#want ["backwards", "am", "I"]
