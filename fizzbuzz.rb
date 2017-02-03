@@ -2,6 +2,19 @@ require 'rspec'
 
 
 def hashed_fizz_buzz(num)
+  hash = Hash.new
+  1.upto(num).each do |number|
+    if (number % 3 == 0) && (number % 5 == 0)
+      hash[number] = "FizzBuzz"
+    elsif (number % 3 == 0)
+      hash[number] = "Fizz"
+    elsif (number % 5 == 0)
+      hash[number] = "Buzz"
+    else
+      hash[number] = number
+    end
+  end
+  hash
 end
 
 describe "Hashed FizzBuzz" do
